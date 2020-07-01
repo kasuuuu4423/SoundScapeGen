@@ -1,0 +1,91 @@
+$black: #333333;
+$black_after: #888888;
+$white: #F4F4F4;
+$white_after: rgb(177, 177, 177);
+$m-s: 0.7rem;
+$m-m: 2.5rem;
+$m-l: 4rem;
+$font:  source-han-sans-japanese,sans-serif;
+$font-s: 0.8rem;
+$font-m: 1rem;
+$font-l: 1.2rem;
+$lang__pad: 0.2rem;
+$medium: 400;
+$bold: 600;
+$regular: 200;
+$break: 768px;
+
+//colors
+$css: #B183AF;
+$php: #525A90;
+$wp: #4C799A;
+$py: #8E9D6D;
+$js: #9B8A63;
+$ard: #59898D;
+$pro: #3D5262;
+
+@mixin langColors() {
+  &.all{
+    background: $black;
+  }
+  &.php{
+    background: $php;
+  }
+  &.css{
+    background: $css;
+  }
+  &.ard{
+    background: $ard;
+  }
+  &.wp{
+    background: $wp;
+  }
+  &.py{
+    background: $py;
+  }
+  &.js{
+    background: $js;
+  }
+  &.pro{
+    background: $pro;
+  }
+}
+
+@mixin langColorsTxt() {
+  &.all{
+    color: $black;
+  }
+  &.php{
+    color: $php;
+  }
+  &.css{
+    color: $css;
+  }
+  &.ard{
+    color: $ard;
+  }
+  &.wp{
+    color: $wp;
+  }
+  &.py{
+    color: $py;
+  }
+  &.js{
+    color: $js;
+  }
+  &.pro{
+    color: $pro;
+  }
+}
+
+.pc_only{
+  @media(max-width: $break){
+    display: none;
+  }
+}
+
+.sp_only{
+  @media(min-width: 769px){
+    display: none;
+  }
+}

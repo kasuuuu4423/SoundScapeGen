@@ -1,0 +1,54 @@
+extend _includes/_layout.pug
+block content
+  main
+    .main__wrap_for_content_related
+      section.content
+        .content__wrap_for_cat_date
+          section.content__cat
+            .content__item: span.wp WordPress
+            .content__item: span.js JavaScript
+          .content__date 0000/00/00
+        h1.content__title.wp WordPressでブログカードの画像が表示されない時の対処法
+        .content__tag tag: 
+          a(href="#") WordPress
+          a(href="#") PHP
+        p この度、5秒で始められるゲームプログラミング学習サービス「プロアカ」をリリースしました。1人での開発でしたが月額課金制度まで実装しており、少し大きなプロダクトになったので知見を共有したいと思いました。
+        h2.wp 作ったサービス
+        p 今回開発したゲームプログラミング学習サービス「プロアカ」は、JavaScriptプログラミング及びJavaScriptゲームプログラミングを学習できるサービスです。また、学習を終えた人がオリジナルゲームを開発するための開発ツールもあります。
+        h3 JavaScriptゲームプログラミング
+        p JavaScriptゲームプログラミングにはPhaser.jsを使用しています。Phaser.jsを使うと少ないコードで本格的なゲームを作成することができます。
+        h4 aaaaaaaaaaaaa
+        h2.wp 目次
+        ul
+          - for(var i = 0; i < 3; i++)
+            li 作ったサービス#{i}
+        ol
+          - for(var i = 0; i < 3; i++)
+            li 作ったサービス#{i}
+        .content__share
+          span.share__twitter: img(src="./img/tweet.png", alt="tweetする")
+          span.share__facebook: img(src="./img/share.png", alt="facebookでシェアする")
+      section.ad
+      section.related
+        .related__head Related
+        .related__article.php
+          .related__cat PHP
+          .related__date 0000/00/00
+          .related__title WordPressでブログカードの画像が表示されない時の対処法
+        .related__article.css
+          .related__cat CSS
+          .related__date 0000/00/00
+          .related__title WordPressでブログカードの画像が表示されない時の対処法
+        .related__article.ard
+          .related__cat Arduino
+          .related__date 0000/00/00
+          .related__title WordPressでブログカードの画像が表示されない時の対処法
+    section.index.pc_only
+      .h2 h2h2h2h2h2
+      .h3 h3h3h3h3h3
+      .h4 h4h4h4h4h4
+      .h2 h2h2h2h2h2
+      .h3 h3h3h3h3h3
+      .h4 h4h4h4h4h4
+      .h3 h3h3h3h3h3
+      .h4 h4h4h4h4h4

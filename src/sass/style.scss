@@ -1,0 +1,74 @@
+$black: #282828;
+$white: #ffffff;
+$white_after: #e5e5e5;
+
+body{
+  margin: 0;
+  background: #ffffff;
+  color: $black;
+  font-weight: 400;
+  width: 90%;
+  margin: auto;
+}
+
+main{
+  width: 100%;
+  ul{
+    li{
+      padding: 5px;
+      list-style: none;
+    }
+    &.ul_button{
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        button{
+          padding: 5px;
+          background-color: $black;
+          color: $white;
+          border: none;
+          font-size: 90%;
+          &:hover{
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    &.ul_audio{
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        background: $black;
+        color: $white;
+        display: flex;
+        flex-wrap: wrap;
+        width: 20%;
+        margin: 1%;
+        div{
+          width: 100%;
+          background: $white;
+          color: $black;
+          padding: 1px 5px;
+          margin-bottom: 10px;
+        }
+        audio{
+          width: 100%;
+          justify-self: center;
+          margin-bottom: 10px;
+        }
+        button{
+          width: 100%;
+          background: $white;
+          border: none;
+          font-weight: bold;
+          font-size: 90%;
+          &:hover{
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}

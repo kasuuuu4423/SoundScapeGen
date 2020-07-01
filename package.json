@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "gulp-scss": "^1.4.0",
+    "nodesass": "0.0.2-security",
     "react-dnd": "^11.1.3"
   }
 }

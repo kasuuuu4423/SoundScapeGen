@@ -1,6 +1,4 @@
-import AudioPlayer from "./audioPlayer.js";
 import ManagePlayer from "./managePlayer.js";
-import AudioList from "./audioList.js";
 
 let manage = new ManagePlayer();
 

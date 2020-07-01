@@ -4,6 +4,11 @@ class ManagePlayer{
   constructor(){
     this.wrap = document.getElementById('wrap');
 
+    this.wrap_audio = document.createElement('div');
+    this.wrap_audio.className = 'audio';
+    this.wrap_button = document.createElement('div');
+    this.wrap_button.className = 'button';
+
     this.audio_ul = document.createElement('ul');
     this.audio_ul.className = 'ul_audio';
 
@@ -46,8 +51,10 @@ class ManagePlayer{
         delete this.players[parseInt(name[1])];
       }
     });
-    this.wrap.appendChild(this.button_ul);
-    this.wrap.appendChild(this.audio_ul);
+    this.wrap_button.appendChild(this.button_ul);
+    this.wrap_audio.appendChild(this.audio_ul);
+    this.wrap.appendChild(this.wrap_button);
+    this.wrap.appendChild(this.wrap_audio);
   }
   add_player(){
     this.players.push(new AudioPlayer("./assets/audio/camera.mp3"));

@@ -34,21 +34,22 @@ class ManagePlayer{
       let name = target.name;
       try{
         name = name.split('=');
+        if(name[0]){
+          if(name[0] == 'audio'){
+            this.players[this.count_list] = new AudioPlayer("./assets/audio/" + name[1] + ".mp3", name[1], this.count_list);
+            let test  = this.players[this.count_list].obj();
+            this.audio_ul.appendChild(test);
+            this.count_list++;
+          }
+          else if(name[0] == 'remove'){
+            let removeItem = document.getElementById('audio=' + name[1]);
+            this.audio_ul.removeChild(removeItem);
+            delete this.players[parseInt(name[1])];
+          }
+        }
       }
       catch(e){
-        console.log(name);
-        console.log(e);
-      }
-      if(name[0] == 'audio'){
-        this.players[this.count_list] = new AudioPlayer("./assets/audio/" + name[1] + ".mp3", name[1], this.count_list);
-        let test  = this.players[this.count_list].obj();
-        this.audio_ul.appendChild(test);
-        this.count_list++;
-      }
-      else if(name[0] == 'remove'){
-        let removeItem = document.getElementById('audio=' + name[1]);
-        this.audio_ul.removeChild(removeItem);
-        delete this.players[parseInt(name[1])];
+        //エラー出まくりの対処try
       }
     });
     this.wrap_button.appendChild(this.button_ul);

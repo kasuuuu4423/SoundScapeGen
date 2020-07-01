@@ -9,6 +9,7 @@ class AudioPlayer{
     this.player.setAttribute('src', src);
     this.player.setAttribute('loop', true);
     this.player.setAttribute('autoplay', true);
+    this.player.setAttribute('name', 'audio');
 
     this.button_remove = document.createElement('button');
     this.button_remove.name = 'remove=' + num;

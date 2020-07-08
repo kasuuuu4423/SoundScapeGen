@@ -23,7 +23,10 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-pug": "^3.3.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "id3-parser": "^2.0.0",
+    "id3js": "^2.1.1",
+    "node-id3": "^0.1.17"
   },
   "dependencies": {
     "gulp-scss": "^1.4.0",

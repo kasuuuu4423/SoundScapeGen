@@ -18,25 +18,27 @@ class ManagePlayer{
     this.players = [];
 
     var text = readTextFile("assets/audio/list.inc");
-    let list = splitComma(text);
+    let list = text.split('\n');
     this.list_audio = [];
     this.count_list = 0;
     for(let i = 0; i < list.length; i++){
       let li = document.createElement('li');
       let audioText = document.createElement('button');
-      audioText.innerHTML = list[i];
-      audioText.name = 'audio=' + list[i];
+      let filedata = list[i].split(',');
+      audioText.innerHTML = filedata[1];
+      audioText.name = 'audio=' + filedata[0];
       li.appendChild(audioText);
       this.button_ul.appendChild(li);
     }
     this.wrap.addEventListener('click', (e) => {
       let target = e.target;
       let name = target.name;
+      let inner = target.innerHTML;
       try{
         name = name.split('=');
         if(name[0]){
           if(name[0] == 'audio'){
-            this.players[this.count_list] = new AudioPlayer("./assets/audio/" + name[1] + ".mp3", name[1], this.count_list);
+            this.players[this.count_list] = new AudioPlayer("./assets/audio/" + name[1] + ".mp3", inner, this.count_list);
             let test  = this.players[this.count_list].obj();
             this.audio_ul.appendChild(test);
             this.count_list++;
@@ -57,8 +59,8 @@ class ManagePlayer{
     this.wrap.appendChild(this.wrap_button);
     this.wrap.appendChild(this.wrap_audio);
   }
-  add_player(){
-    this.players.push(new AudioPlayer("./assets/audio/camera.mp3"));
+  add_player(filename){
+    this.players.push(new AudioPlayer("./assets/audio/" + filename + ".mp3"));
   }
 }
 
@@ -78,11 +80,5 @@ const readTextFile = (file) => {
   rawFile.send(null);
   return result;
 }
-
-const splitComma = (text) => {
-  let result = text.split(',');
-  return result;
-}
-
 
 export default ManagePlayer;

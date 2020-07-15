@@ -25,8 +25,8 @@ class ManagePlayer{
       let li = document.createElement('li');
       let audioText = document.createElement('button');
       let filedata = list[i].split(',');
-      audioText.innerHTML = filedata[1];
-      audioText.name = 'audio=' + filedata[0];
+      audioText.innerHTML = filedata[0];
+      audioText.name = 'audio=' + filedata[1];
       li.appendChild(audioText);
       this.button_ul.appendChild(li);
     }

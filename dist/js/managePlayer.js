@@ -1,4 +1,4 @@
-import AudioPlayer from "./audioPlayer.Js";
+import AudioPlayer from "./audioPlayer.js";
 
 class ManagePlayer{
   constructor(){

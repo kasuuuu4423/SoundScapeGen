@@ -1,11 +1,12 @@
 export default class LoadCSV{
     data;
     request;
-    constructor(path){
+    constructor(path, callback=()=>{}){
         this.request = new XMLHttpRequest();
         this.request.addEventListener('load', (e) => {
             let response = e.target.responseText;
             this.data = this.conv_responce(response);
+            callback();
         });
         this.request.open('GET', path, true);
         this.request.send();

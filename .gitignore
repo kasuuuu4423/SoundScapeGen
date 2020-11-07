@@ -2,3 +2,5 @@ dist/assets/audio/
 test/
 test*
 node_modules/
+soundScapeEmulator/assets/audio/
+soundScapeEmulator/js/sse/assets/audio/

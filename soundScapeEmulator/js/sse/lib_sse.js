@@ -6,7 +6,7 @@ import Util from './class/util.class.js';
 
 export default class SSE{
     players;audioNames = [];csv;csvData;MN;MP;names;wrap;config;util;
-    constructor(){
+    constructor(maxNum){
         this.wrap = document.getElementById('sse');
         this.wrap = this.addWrappers(this.wrap);
         this.config = new Config();
@@ -14,7 +14,7 @@ export default class SSE{
         this.MN = new Manage_names();
         this.MP = new Manage_players();
         this.csv = new LoadCSV(this.config.root + '/assets/list.csv');
-        this.csv_event(this.csv);
+        this.csv_event(this.csv, maxNum);
         this.click_event();
     }
     addWrappers(wrap){
@@ -26,10 +26,10 @@ export default class SSE{
         wrap.appendChild(players);
         return wrap;
     }
-    csv_event(csvInstance){
+    csv_event(csvInstance, maxNum){
         csvInstance.request.addEventListener('load', (e)=>{
             this.names = csvInstance.data;
-            for(let i = 0; i < this.names.length; i++){
+            for(let i = 0; i < this.names.length && i < maxNum; i++){
                 this.MN.addName(this.names[i][0]);
             }
         });

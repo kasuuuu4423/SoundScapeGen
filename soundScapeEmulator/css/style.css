@@ -23,6 +23,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 #sse #names .name {

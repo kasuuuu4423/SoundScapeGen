@@ -14,6 +14,7 @@ body{
         flex-wrap: wrap;
         padding: $padding;
         justify-content: space-between;
+        align-content: flex-start;
         .name{
             padding: 5px 10px;
             background: #191919;

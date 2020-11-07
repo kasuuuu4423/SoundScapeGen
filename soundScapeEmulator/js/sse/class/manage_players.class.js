@@ -39,8 +39,10 @@ export default class Manage_player{
                 let btn_change = this.players[i][0].getElementsByClassName('btn_rename')[0];
                 btn_change.innerText = '完了';
                 let input = this._create_input_text();
+                input.value = text.innerHTML;
                 this.players[i][0].insertBefore(input, this.players[i][0].firstChild);
-                console.log(this.players[i][0]);
+                input.focus();
+                input.select();
             }
         }
     }

@@ -6,7 +6,7 @@ export default class AudioName{
         this.name.classList.add('name');
         this.name.setAttribute('data-name', name);
         this.name.setAttribute('data-num', num);
-        this.name.innerText = '環境音' + num;
+        this.name.innerText = '音' + num;
         this.nameText = name;
     }
 }
